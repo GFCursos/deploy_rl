@@ -33,14 +33,20 @@ def create_app():
     #     os.chdir(f'{PATH}')
     #     file = os.open(f'{DB_NAME}', os.O_CREAT)
 
-    USR = os.getenv("USR")
-    PWD = os.getenv("PWD")
-    HOST = os.getenv("HOST")
-    DB = os.getenv("DB")
-    PORT = os.getenv("PORT")
+    # USR = os.getenv("USR")
+    # PWD = os.getenv("PWD")
+    # HOST = os.getenv("HOST")
+    # DB = os.getenv("DB")
+    # PORT = os.getenv("PORT")
+
+    # PWD = '7UNDJ7sJjNSqE8N1Dfod'
+    # USR = 'root'
+    # DB = 'railway'
+    # HOST = 'containers-us-west-85.railway.app'
+    # PORT = '7393'
 
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-    app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://{USR}:{PWD}@{HOST}:{PORT}/{DB}'
+    app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://root:oBNmsa0jfbLLlTucEWbk@containers-us-west-35.railway.app:5691/railway'
     db.init_app(app)
 
     import main.resources as resources
