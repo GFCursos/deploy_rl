@@ -1,0 +1,11 @@
+flask
+python-dotenv
+flask-restful
+flask-sqlalchemy
+flask-jwt-extended
+flask-mail
+flask-cors
+flask-login
+marshmallow
+gunicorn==20.0.4
+PyMySQL
