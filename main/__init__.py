@@ -40,7 +40,7 @@ def create_app():
     # PORTDB = os.getenv("PORTDB")
 
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-    app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql://root:PkMXmTzk4DcoULRzFUkU@containers-us-west-32.railway.app:7825/railway'
+    app.config['SQLALCHEMY_DATABASE_URI'] = f'mysql+pymysql://root:PkMXmTzk4DcoULRzFUkU@containers-us-west-32.railway.app:7825/railway'
     db.init_app(app)
 
     import main.resources as resources
